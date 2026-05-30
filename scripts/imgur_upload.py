@@ -16,23 +16,30 @@ FILES = {
 }
 
 img_urls = {}
-print("Uploadam slike na Imgur...")
+print("Uploadam slike na Imgur (sa pauzama)...")
 for fname, ext_ids in FILES.items():
-    try:
-        raw = urllib.request.urlopen(f"{BASE}/{fname}").read()
-        b64 = base64.b64encode(raw).decode()
-        req = urllib.request.Request(
-            "https://api.imgur.com/3/image",
-            data=urllib.parse.urlencode({"image": b64, "type": "base64"}).encode(),
-            headers={"Authorization": f"Client-ID {IMGUR_CLIENT}"})
-        res = json.loads(urllib.request.urlopen(req).read())
-        url = res["data"]["link"]
-        for eid in ext_ids:
-            img_urls[eid] = url
-        print(f"  OK: {fname} -> {url}")
-        time.sleep(0.5)
-    except Exception as e:
-        print(f"  GRESKA {fname}: {e}")
+    success = False
+    for attempt in range(3):
+        try:
+            raw = urllib.request.urlopen(f"{BASE}/{fname}").read()
+            b64 = base64.b64encode(raw).decode()
+            req = urllib.request.Request(
+                "https://api.imgur.com/3/image",
+                data=urllib.parse.urlencode({"image": b64, "type": "base64"}).encode(),
+                headers={"Authorization": f"Client-ID {IMGUR_CLIENT}"})
+            res = json.loads(urllib.request.urlopen(req).read())
+            url = res["data"]["link"]
+            for eid in ext_ids:
+                img_urls[eid] = url
+            print(f"  OK: {fname}")
+            success = True
+            time.sleep(3)
+            break
+        except Exception as e:
+            print(f"  Pokusaj {attempt+1}/3 neuspjesan: {e}")
+            time.sleep(5)
+    if not success:
+        print(f"  PRESKACAM: {fname}")
 
 print(f"\nAzuriram Klaviyo ({len(img_urls)} proizvoda)...")
 ok = 0
