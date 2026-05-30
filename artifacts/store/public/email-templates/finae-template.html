@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>FINAE</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+
+    body, table, td, a {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    table, td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+    img {
+      -ms-interpolation-mode: bicubic;
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+    }
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      background-color: #0a0a0a;
+      font-family: 'Jost', Arial, sans-serif;
+    }
+    a {
+      color: #c9a84c;
+    }
+    .email-wrapper {
+      background-color: #0a0a0a;
+      width: 100%;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #0a0a0a;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .email-container { width: 100% !important; }
+      .mobile-padding { padding: 30px 20px !important; }
+      .mobile-center { text-align: center !important; }
+      h1 { font-size: 32px !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="email-wrapper">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="email-wrapper">
+      <tr>
+        <td align="center" style="padding: 0;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="email-container">
+
+            <!-- TOP BORDER -->
+            <tr>
+              <td style="height: 3px; background-color: #c9a84c; font-size: 0; line-height: 0;">&nbsp;</td>
+            </tr>
+
+            <!-- HEADER -->
+            <tr>
+              <td align="center" style="padding: 48px 40px 40px; background-color: #0a0a0a;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <td align="center">
+                      <div style="display: inline-block; border: 1px solid #c9a84c; padding: 12px 40px;">
+                        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; letter-spacing: 8px; color: #c9a84c; text-transform: uppercase;">FINAE</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding-top: 20px;">
+                      <div style="height: 1px; background: linear-gradient(to right, transparent, #c9a84c, transparent); max-width: 300px; margin: 0 auto;"></div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- HERO SECTION -->
+            <tr>
+              <td style="padding: 0 40px 48px; background-color: #0a0a0a;" class="mobile-padding">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+
+                  <!-- Heading -->
+                  <tr>
+                    <td align="center" style="padding-bottom: 24px;">
+                      <h1 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 40px; font-weight: 300; color: #f5f0eb; line-height: 1.2; letter-spacing: 2px;">
+                        Dobrodošli u FINAE
+                      </h1>
+                    </td>
+                  </tr>
+
+                  <!-- Divider -->
+                  <tr>
+                    <td align="center" style="padding-bottom: 28px;">
+                      <div style="display: inline-block; width: 40px; height: 1px; background-color: #c9a84c;"></div>
+                    </td>
+                  </tr>
+
+                  <!-- Body text -->
+                  <tr>
+                    <td align="center" style="padding-bottom: 40px;">
+                      <p style="margin: 0; font-family: 'Jost', Arial, sans-serif; font-size: 15px; font-weight: 300; color: #a89880; line-height: 1.8; letter-spacing: 0.5px; max-width: 460px;">
+                        Dragi {{ first_name|default:'prijatelju' }},<br><br>
+                        Hvala što si se pridružio/la FINAE zajednici. Vjerujemo da svakodnevni predmeti mogu biti iznimni — od jutarnje rutine do noćnog odmora.<br><br>
+                        Naši proizvodi nastaju s pažnjom prema materijalima, izradi i trajnosti. Svaki komad osmišljen je da traje.
+                      </p>
+                    </td>
+                  </tr>
+
+                  <!-- CTA Button -->
+                  <tr>
+                    <td align="center" style="padding-bottom: 48px;">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td style="background-color: #c9a84c;">
+                            <a href="https://byfinae.com" style="display: inline-block; padding: 16px 48px; font-family: 'Jost', Arial, sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: #0a0a0a; text-decoration: none;">
+                              OTVORI KOLEKCIJU
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- Divider line -->
+                  <tr>
+                    <td align="center" style="padding-bottom: 48px;">
+                      <div style="height: 1px; background: linear-gradient(to right, transparent, #2a2a2a, transparent);"></div>
+                    </td>
+                  </tr>
+
+                  <!-- Featured categories -->
+                  <tr>
+                    <td align="center" style="padding-bottom: 12px;">
+                      <p style="margin: 0; font-family: 'Jost', Arial, sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: #c9a84c;">
+                        NAŠI BESTSELLERI
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding-bottom: 40px;">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td style="padding: 8px 16px;">
+                            <a href="https://byfinae.com" style="font-family: 'Jost', Arial, sans-serif; font-size: 12px; font-weight: 300; letter-spacing: 2px; color: #a89880; text-decoration: none; text-transform: uppercase;">Jastučnice</a>
+                          </td>
+                          <td style="padding: 8px 4px; color: #3a3a3a; font-size: 12px;">·</td>
+                          <td style="padding: 8px 16px;">
+                            <a href="https://byfinae.com" style="font-family: 'Jost', Arial, sans-serif; font-size: 12px; font-weight: 300; letter-spacing: 2px; color: #a89880; text-decoration: none; text-transform: uppercase;">Posteljina</a>
+                          </td>
+                          <td style="padding: 8px 4px; color: #3a3a3a; font-size: 12px;">·</td>
+                          <td style="padding: 8px 16px;">
+                            <a href="https://byfinae.com" style="font-family: 'Jost', Arial, sans-serif; font-size: 12px; font-weight: 300; letter-spacing: 2px; color: #a89880; text-decoration: none; text-transform: uppercase;">Ručnici</a>
+                          </td>
+                          <td style="padding: 8px 4px; color: #3a3a3a; font-size: 12px;">·</td>
+                          <td style="padding: 8px 16px;">
+                            <a href="https://byfinae.com" style="font-family: 'Jost', Arial, sans-serif; font-size: 12px; font-weight: 300; letter-spacing: 2px; color: #a89880; text-decoration: none; text-transform: uppercase;">Čarape</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                </table>
+              </td>
+            </tr>
+
+            <!-- FOOTER -->
+            <tr>
+              <td style="padding: 32px 40px; background-color: #111111; border-top: 1px solid #1e1e1e;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+
+                  <!-- Logo small -->
+                  <tr>
+                    <td align="center" style="padding-bottom: 20px;">
+                      <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 14px; font-weight: 400; letter-spacing: 6px; color: #c9a84c; text-transform: uppercase;">FINAE</span>
+                    </td>
+                  </tr>
+
+                  <!-- Social links -->
+                  <tr>
+                    <td align="center" style="padding-bottom: 20px;">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td style="padding: 0 12px;">
+                            <a href="#" style="font-family: 'Jost', Arial, sans-serif; font-size: 11px; letter-spacing: 2px; color: #5a5a5a; text-decoration: none; text-transform: uppercase;">Instagram</a>
+                          </td>
+                          <td style="padding: 0 12px;">
+                            <a href="#" style="font-family: 'Jost', Arial, sans-serif; font-size: 11px; letter-spacing: 2px; color: #5a5a5a; text-decoration: none; text-transform: uppercase;">Facebook</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- Divider -->
+                  <tr>
+                    <td style="padding-bottom: 20px;">
+                      <div style="height: 1px; background-color: #1e1e1e;"></div>
+                    </td>
+                  </tr>
+
+                  <!-- Unsubscribe -->
+                  <tr>
+                    <td align="center">
+                      <p style="margin: 0; font-family: 'Jost', Arial, sans-serif; font-size: 11px; font-weight: 300; color: #3a3a3a; letter-spacing: 0.5px; line-height: 1.6;">
+                        Primaš ovu poruku jer si se pretplatio/la na FINAE newsletter.<br>
+                        <a href="{% unsubscribe_url %}" style="color: #5a5a5a; text-decoration: underline;">Odjavi se</a>
+                        &nbsp;·&nbsp;
+                        <a href="https://byfinae.com" style="color: #5a5a5a; text-decoration: none;">byfinae.com</a>
+                      </p>
+                    </td>
+                  </tr>
+
+                </table>
+              </td>
+            </tr>
+
+            <!-- BOTTOM BORDER -->
+            <tr>
+              <td style="height: 3px; background-color: #c9a84c; font-size: 0; line-height: 0;">&nbsp;</td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
