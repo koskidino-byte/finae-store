@@ -1,17 +1,4 @@
-services:
-  - type: web
-    name: finae-api
-    runtime: node
-    rootDir: artifacts/api-server
-    buildCommand: corepack enable && corepack prepare pnpm@9.15.0 --activate && pnpm install && pnpm run build
-    startCommand: pnpm run start
-    envVars:
-      - key: DATABASE_URL
-        sync: false
-      - key: NODE_ENV
-        value: production
-
-  - type: static
-    name: finae-store
-    buildCommand: echo "pre-built"
-    staticPublishPath: dist-frontend
+routes:
+  - type: rewrite
+    source: /api/*
+    destination: https://finae-api.onrender.com/api/:splat
