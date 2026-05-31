@@ -1,10 +1,26 @@
 services:
   - type: web
     name: finae-api
-    env: node
-    plan: free
-    buildCommand: npm install -g pnpm@9 --prefix=/tmp/pnpm && export PATH=/tmp/pnpm/bin:$PATH && pnpm install && pnpm --filter @workspace/api-server run build
-    startCommand: node artifacts/api-server/dist/index.mjs
+    runtime: node
+    rootDir: artifacts/api-server
+    buildCommand: npm install -g pnpm && pnpm install && pnpm run build
+    startCommand: pnpm run start
     envVars:
+      - key: DATABASE_URL
+        sync: false
       - key: NODE_ENV
         value: production
+
+  - type: static
+    name: finae-store
+    rootDir: artifacts/store
+    buildCommand: npm install -g pnpm && pnpm install && pnpm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://finae-api.onrender.com
+
+databases:
+  - name: finae-db
+    databaseName: finae_db
+    plan: free
