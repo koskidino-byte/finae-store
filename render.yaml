@@ -14,7 +14,7 @@ services:
   - type: static
     name: finae-store
     rootDir: artifacts/store
-    buildCommand: corepack enable && corepack prepare pnpm@9.15.0 --activate && pnpm install && pnpm run build
+    buildCommand: npm install && npm run build
     staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
