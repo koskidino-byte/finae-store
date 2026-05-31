@@ -13,9 +13,5 @@ services:
 
   - type: static
     name: finae-store
-    rootDir: artifacts/store
-    buildCommand: npm install && npm run build
-    staticPublishPath: dist
-    envVars:
-      - key: VITE_API_URL
-        value: https://finae-api.onrender.com
+    buildCommand: echo "pre-built"
+    staticPublishPath: dist-frontend
