@@ -3,7 +3,7 @@ services:
     name: finae-api
     runtime: node
     rootDir: artifacts/api-server
-    buildCommand: npm install -g pnpm@9 && pnpm install && pnpm run build
+    buildCommand: corepack enable && corepack prepare pnpm@9.15.0 --activate && pnpm install && pnpm run build
     startCommand: pnpm run start
     envVars:
       - key: DATABASE_URL
@@ -14,7 +14,7 @@ services:
   - type: static
     name: finae-store
     rootDir: artifacts/store
-    buildCommand: npm install -g pnpm@9 && pnpm install && pnpm run build
+    buildCommand: corepack enable && corepack prepare pnpm@9.15.0 --activate && pnpm install && pnpm run build
     staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
